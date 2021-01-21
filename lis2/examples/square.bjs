@@ -1,0 +1,12 @@
+size := getnum "Size: ";
+color := getstr "Color: ";
+set_color color;
+x := 0;
+while x <= size do beg
+    y := 0;
+    while y <= size do beg
+        set_pixel x, y;
+        y := y + 1;
+    end
+    x := x + 1;
+end

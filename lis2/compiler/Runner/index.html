@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ЛИС-2</title>
+        <style>
+            button{
+                background-color: rgb(0, 186, 199);
+                position: relative;
+                color: white;
+                font-size: 18px;
+                padding: 5px 40px;
+                border-radius: 12px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            body{
+                background-color: rgb(10, 10, 10);
+            }
+            textarea{
+                resize: unset;
+                font-size: 18px;
+                background-color: rgb(48, 48, 48);
+                color: rgb(255, 255, 0);
+            }
+            textarea,
+            pre {
+                -moz-tab-size : 3;
+                -o-tab-size : 3;
+                    tab-size : 3;
+            }
+            canvas{
+                background-color: rgb(48, 48, 48);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="position: absolute; left: 50%; right: 50%; margin-right: -50%; transform: translate(-50%, 0%);">
+                <textarea rows="25" cols="100" name="code" id="codeArea" spellcheck="false"></textarea>
+                </br>
+                <button onclick="runCode()" style="position: relative; background-color: rgb(185, 173, 0);">RUN</button>
+                <button style="position: relative; left: 20px;">INFO</button>
+                <button onclick="loadFile()" style="position: relative; left: 40px;">LOAD</button>
+                <input id="file-input" type="file" style="display: none;" />
+                <button onclick="saveFile()" style="position: relative; left: 60px;">SAVE</button>
+                <a id="save-file" href="" download="" style="display: none;"></a>
+                </br></br>
+                <div>
+                    <canvas id="canvas" width="400" height="300"></canvas>
+                    <textarea rows="10" cols="50" name="console" id="console" readonly spellcheck="false"></textarea>
+                </div>
+        </div>
+        
+        <script src="../graphlib/graph.js"></script>
+        <script src="../Parser/moo.js"></script>
+        <script src="nearley.js"></script>
+        <script src="../Parser/grammar.js"></script>
+        <script src="../Parser/parser.js"></script>
+        <script src="htmlsup.js"></script>
+        <script src="wrapper.js"></script>
+        <script>
+            console.warn(
+                window.grammar,
+                window.nearley,
+                window.moo
+            );
+        </script>
+    </body>
+</html>

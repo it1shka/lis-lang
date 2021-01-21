@@ -1,0 +1,5 @@
+fun sum a, b => a + b;
+#
+a := getnum "Enter A: ";
+b := getnum "Enter B: ";
+print (sum a, b);

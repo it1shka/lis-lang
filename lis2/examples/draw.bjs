@@ -1,0 +1,14 @@
+set_color "red";
+b := getnum "Enter a number!";
+a := 0;
+
+while a <= b do
+beg
+	_a := a + 25;
+	set_pixel _a, _a;
+	set_pixel 25, _a;
+	set_pixel _a, 25;
+	a := a + 1;
+end
+
+print "Program finished!";

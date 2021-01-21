@@ -1,0 +1,15 @@
+i := getnum "Введите счетчик: ";
+a := 0;
+while a < i do
+beg
+    a := a + 1;
+    b := a % 3;
+    c := a % 5;
+
+    if b = 0 and c = 0 do 
+        print "FizzBuzz ", a;
+    else if b = 0 do
+        print "Fizz ", a;
+    else if c = 0 do
+        print "Buzz", a;
+end
